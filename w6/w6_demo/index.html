@@ -16,7 +16,54 @@
 </head>
 <body>
     
-    <h1>Intro To Js</h1>
+    <h1>Intro To JS</h1>
+
+    <script>
+
+        //comment in JS
+
+        //all variables must be declared & defined
+        //var = variable
+
+        //declare & define
+        var name = 'kt' 
+
+        var num1 = 10
+        var num2 = 7
+
+        var sum = num1 + num2
+
+        //output------------------------------------------
+
+        console.log(`Num1: ${num1} | Num2: ${num2}`) // ` != '' 
+
+        //alert() can be seen by view
+        //create a pop up window | user must interact to continue code
+
+        alert(`Hi there, ${name}!`)
+
+        console.log(`passed the alert()`)
+
+        //input------------------------------------------
+        //prompt()
+
+        var lname = prompt(`Hi again ${name}, please enter your Last name: `)
+
+        console.log(`passed the prompt`)
+
+        console.log(`Last: ${lname}`) //for dev
+        alert(`Last: ${lname}`)       //for user
+
+        //cast prompt
+        var userNum = Number(prompt(`Enter a number: `))
+        console.log(userNum.toFixed(2))
+
+        var tax = userNum * 0.20
+
+        alert(`Your Taxes Due: $${tax.toFixed(2)}`)
+        console.log(`Your Taxes Due: $${tax.toFixed(2)}`)
+
+    </script>
 
 </body>
 </html>
