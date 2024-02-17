@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a</title>
+    <title>JS Pay Calc</title>
+
+    <style>
+
+        body{
+            background-color: darkgray;
+        }
+
+    </style>
+
 </head>
 <body>
+
+    <h1>Js Pay Calculator</h1>
+
+    <script>
+
+        // user input
+        var hrPay = Number(prompt(`Please enter your hourly rate: `))
+        var hrWorked = Number(prompt(`Please enter the amount of hours worked this week: `))
+        var tax = Number(.2)
+
+        console.log(`Passed all prompt()`)
+
+        // equations
+        hrWorked *=  2
+        var grossPay = hrPay * hrWorked
+        var samShare = grossPay * tax
+        var netPay = grossPay - samShare
+
+        console.log(`equations ran`)
+
+        // final output
+        alert(`*all outputs are over a 2 week period* \n\n Gross Pay $${grossPay.toFixed(2)} \n Money Taxed: $${samShare.toFixed(2)} \n Net Pay: $${netPay.toFixed(2)}`)
+
+        console.log(`Final outputs ran`)
+
+        console.log(`*all outputs are over a 2 week period* \n\n Gross Pay $${grossPay.toFixed(2)} \n Money Taxed: $${samShare.toFixed(2)} \n Net Pay: $${netPay.toFixed(2)}`)
+
+    </script>
     
 </body>
 </html>
