@@ -49,7 +49,52 @@
             {first:"Yara", last:"Greyjoy", credit:"Queen of the Iron Islands and Lady Reaper of Pyke" }
 
             ]
+
+        console.log(people) //view entire array
+        console.log(people[0]) //view especific "value"
+        console.log(people[0].last) //even more especific
+
+        //select main element that hold everything (body)
+        var body = document.querySelector('body')
+
+        console.log(body) //see full value
+        console.dir(body) //see value in "object state"
+
+        //for every value in array: create <div>, give ID, assign class (red). 
+        //for every property in object create <p> to hold value and text node to hold content
+        //add the <p> to <div>, add <div> to <body>
+
+        for (let i = 0; i < people.length; i++){
+
+            //create <div>
+            var tempDiv = document.createElement(`div`)
+
+            //assign ID
+            tempDiv.setAttribute(`id`, people[i].first)
+            tempDiv.setAttribute(`class`, `red`)
+
+            for (let key in people[i]){
+
+                //create <p>
+                var p = document.createElement(`p`)
+                var text = document.createTextNode(people[i][key])
+
+                //add text to p
+                p.appendChild(text)
+                tempDiv.appendChild(p)
+
+            }
+                
+
+            //add the div to body
+            body.appendChild(tempDiv)
+
+        }
+        
+
+
     </script>
+
     
 </body>
 </html>
